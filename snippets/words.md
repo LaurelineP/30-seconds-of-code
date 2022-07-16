@@ -14,7 +14,7 @@ Converts a given string into an array of words.
 - Omit the second argument, `pattern`, to use the default regexp.
 
 ```js
-const words = (str, pattern = /[^a-zA-Z-]+/) =>
+const words = (str, pattern = /[\W|\d|\s]+/) =>
   str.split(pattern).filter(Boolean);
 ```
 
